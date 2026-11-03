@@ -1,0 +1,38 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "savereel",
+  "main": "src/index.tsx",
+  "compatibility_date": "2025-11-01",
+
+  // Everything is rendered by the Worker: no static asset bucket, no build step.
+  "observability": {
+    "enabled": true
+  },
+
+  // Aggregate counters for the public stats page/API. No identifiers are stored:
+  // one row per (day|total, metric).
+  "d1_databases": [
+    {
+      "binding": "STATS",
+      "database_name": "savereel-stats",
+      "database_id": "9328490d-e320-4677-81dc-80e4c047efb1"
+    }
+  ],
+
+  "vars": {
+    "BRAND_NAME": "SaveReel"
+    // PUBLIC_ORIGIN is intentionally unset. src/config.ts falls back to the
+    // request origin, so the deployed Worker is correct on workers.dev and on
+    // any custom domain without a rebuild. Set it only to force a canonical
+    // host that differs from the one serving traffic.
+  }
+
+  // Optional, only if you want cross-isolate rate limiting / a shared media cache:
+  // "kv_namespaces": [
+  //   { "binding": "RATE_LIMIT", "id": "<kv-id>" },
+  //   { "binding": "MEDIA_CACHE", "id": "<kv-id>" }
+  // ]
+
+  // Optional, set a custom domain before deploying:
+  // "routes": [{ "pattern": "savereel.example", "custom_domain": true }]
+}

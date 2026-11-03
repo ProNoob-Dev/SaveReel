@@ -1,0 +1,13 @@
+# Copy to .dev.vars (git-ignored) for local `wrangler dev`.
+# In production set these with: npx wrangler secret put <NAME>
+
+# HMAC key for signed download links. 32+ random bytes. Rotating it invalidates live links.
+SIGNING_KEY=dev-only-change-me-0123456789abcdef
+
+# Optional: an Instagram session cookie unlocks stories, highlights and private
+# accounts you follow. Use a throwaway account. Never a personal one.
+# IG_SESSIONID=
+# IG_USER_AGENT=
+
+# Optional: Cloudflare Turnstile. When set, /api/search requires a token.
+# TURNSTILE_SECRET=
