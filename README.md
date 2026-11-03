@@ -11,6 +11,20 @@
   <a href="https://deploy.workers.cloudflare.com/?url=https://github.com/YOUR_USERNAME/savereel"><img alt="Deploy to Cloudflare Workers" src="https://deploy.workers.cloudflare.com/button"></a>
 </p>
 
+> **Run your own Instagram downloader — free, self-hosted, and private.**
+> One Cloudflare Worker. No database. No API keys. No vendor accounts.
+> Deploy in a single command on Cloudflare's free tier.
+
+## Why people star this
+
+- 🔒 **Private & self-hosted** — your links never pass through a third-party service
+- 🆓 **Free to run** — sits on Cloudflare's free tier; no server to manage, no bill
+- 🔑 **Zero API keys** — a key-free resolution chain ported from open-source extractors
+- ⚡ **One Worker, one deploy** — server-rendered HTML *and* a JSON API in a single bundle
+- 🎥 **Every format** — reels, video, photos, stories, highlights, IGTV, avatar, audio
+- 🔐 **Safe media proxy** — HMAC-signed, host-checked `/api/dl` downloads; no open proxy
+- 🌍 **i18n by design** — routes, hreflang and sitemap scale to new languages automatically
+
 An Instagram media downloader built as a **single Cloudflare Worker**. No database,
 no container, no build step beyond Wrangler's own bundling. Server-rendered HTML,
 one CSS file, ~300 lines of vanilla JS, and **no third-party API keys** — every
@@ -407,3 +421,7 @@ which is why no code was copied verbatim.
 ## License
 
 Released under the [MIT License](LICENSE). © 2026 SaveReel contributors.
+
+---
+
+If SaveReel saved you a hassle, consider leaving a ⭐ — it genuinely helps others find it.
