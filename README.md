@@ -7,6 +7,10 @@
   <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg">
 </p>
 
+<p align="center">
+  <a href="https://deploy.workers.cloudflare.com/?url=https://github.com/YOUR_USERNAME/savereel"><img alt="Deploy to Cloudflare Workers" src="https://deploy.workers.cloudflare.com/button"></a>
+</p>
+
 An Instagram media downloader built as a **single Cloudflare Worker**. No database,
 no container, no build step beyond Wrangler's own bundling. Server-rendered HTML,
 one CSS file, ~300 lines of vanilla JS, and **no third-party API keys** — every
