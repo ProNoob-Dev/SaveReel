@@ -94,7 +94,7 @@ src/
     format.ts           shared number/date formatting for the ledger
   views/                layout, components, pages, artwork (hono/jsx)
   assets/               CSS, client JS and base64 fonts as String.raw modules
-  i18n/                 en.ts + lookup that falls back to English
+  i18n/                 11 dictionaries (en, es, pt, id, hi, ar, fr, de, it, ja, ko) + lookup that falls back to English
 ```
 
 Everything is rendered by the Worker. There is no `public/` directory and no

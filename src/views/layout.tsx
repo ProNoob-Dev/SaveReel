@@ -149,7 +149,7 @@ export function Layout(props: LayoutProps) {
   const enabled = LOCALES.filter((item) => item.enabled);
 
   return (
-    <html lang={locale}>
+    <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
       <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />

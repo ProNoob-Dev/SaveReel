@@ -2,6 +2,11 @@
  * UI strings. English is the only shipped locale; adding one means copying this
  * file, translating the values, registering it in src/i18n/index.ts and setting
  * enabled: true in LOCALES.
+ *
+ * NOTE: this object is deliberately NOT `as const`. `Dictionary` is
+ * `typeof en`, and literal types would make every translated value
+ * unassignable to it (e.g. "Español" is not "English"). Keep it plain so
+ * translations typecheck; the keys and nesting are still enforced.
  */
 
 export const en = {
@@ -138,6 +143,6 @@ export const en = {
   legal: {
     updated: "Last updated",
   },
-} as const;
+};
 
 export type Dictionary = typeof en;
